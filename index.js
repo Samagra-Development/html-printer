@@ -8,7 +8,7 @@ app.set('view engine', 'html')
 app.get('/export/pdf', (req, res) => {
   (async () => {
       console.log(req.query);
-      const browser = await puppeteer.launch()
+      const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
       const page = await browser.newPage()
       page.setViewport({width: 1400, height: 1000});
       await page.goto(req.query.url, {"waitUntil" : "networkidle0"});
