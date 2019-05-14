@@ -1,8 +1,10 @@
 const express = require('express')
-const port = process.env.PORT || 3021
+const port = process.env.PORT || 3022
 const puppeteer = require('puppeteer')
+var cors = require('cors')
 
 const app = express()
+app.use(cors())
 app.set('view engine', 'html')
 
 app.get('/export/pdf', (req, res) => {
