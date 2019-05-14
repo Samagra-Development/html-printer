@@ -1,5 +1,5 @@
 const express = require('express')
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3021
 const puppeteer = require('puppeteer')
 
 const app = express()
@@ -25,6 +25,6 @@ app.get('/export/pdf', (req, res) => {
   })()
 });
 
-app.listen(port, function() {
+app.listen(port, "0.0.0.0", function() {
   console.log('Server listening at http://localhost:' + port)
 });
