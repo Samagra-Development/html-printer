@@ -40,6 +40,10 @@ app.get('/export/pdf', (req, res) => {
   })()
 });
 
+app.get('/', (req, res) => {
+  res.send({status: "OK"})
+});
+
 (async () => {
   browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
   app.listen(port, "0.0.0.0", function() {
