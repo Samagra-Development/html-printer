@@ -21,5 +21,5 @@ http://localhost:3022?/export/pdf?url=https://github.com/
 - There is no queue management on the system. So a lot of requests in a quick succession will lead to a consumption of a lot of memory and can lead to crashes.
 
 ## 4. Coming Soon
-- [] Queue to manage multiple requests
-- [] Async API to and webhook implementation
+- [ ] Queue to manage multiple requests
+- [ ] Async API to and webhook implementation
